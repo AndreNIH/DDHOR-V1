@@ -4,10 +4,14 @@
 #include "Hooks/GJBaseGameLayer.h"
 #include "Hooks/PlayLayer.h"
 #include "Hooks/PlayerObject.h"
+#include "Hooks/MenuLoaders/LevelPage.h"
 
 #include <cocos2d.h>
 #include "Engine/SharedBot.h"
+#include "Overlay/graphics.h"
+
 #include <Minhook/MinHook.h>
+
 #pragma comment(lib,"Libs/minhook.x32.lib")
 
 void ioLoop() {
@@ -56,21 +60,25 @@ void ioLoop() {
     }
 }
 DWORD WINAPI my_thread(void* hModule) {
-    //Your code goes here
-    //====================
     AllocConsole();
     freopen_s(reinterpret_cast<FILE**>(stdout), "CONOUT$", "w", stdout);
     freopen_s(reinterpret_cast<FILE**>(stdin), "CONIN$", "r", stdin);
     MH_Initialize();
     
+    //Bot Essentials
     Hook::GJBaseGameLayer::memInit();
     Hook::PlayLayer::memInit();
     Hook::PlayerObject::memInit();
+    
+    //User Interface 
+    OverlayGraphics::initialize();
+
     MH_EnableHook(MH_ALL_HOOKS);
     ioLoop();
 
     
     //This line will dettach your DLL when executed. Remove if needed
+    OverlayGraphics::uninitilize();
     MH_Uninitialize();
     FreeConsole();
     FreeLibraryAndExitThread(reinterpret_cast<HMODULE>(hModule), 0);

@@ -21,4 +21,5 @@ void Hook::PlayerObject::memInit(){
 	CreateHook(base + 0x1F9EE0, saveToCheckpoint, &saveToCheckpointPtr);
 	CreateHook(base + 0X1FA080, loadFromCheckpoint, &loadFromCheckpointPtr);
 	sm::internal::write<char>(base + 0x20DC65, '\x24');
+	
 }

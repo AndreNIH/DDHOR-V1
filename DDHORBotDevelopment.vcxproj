@@ -72,12 +72,12 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir)stdx\;$(ProjectDir)Dependencies\;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)stdx\;$(ProjectDir)Dependencies\;$(ProjectDir)Dependencies\imgui;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)Build\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(ProjectDir)stdx\;$(ProjectDir)Dependencies\;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)stdx\;$(ProjectDir)Dependencies\;$(ProjectDir)Dependencies\imgui;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)Build\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -101,7 +101,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>$(SolutionDir)cappuccino-sdk\lib\cappuccino.lib;$(SolutionDir)cappuccino-sdk\lib\libExtensions.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)cappuccino-sdk\lib\cappuccino.lib;$(SolutionDir)cappuccino-sdk\lib\libExtensions.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -123,7 +123,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>$(SolutionDir)cappuccino-sdk\lib\cappuccino.lib;$(SolutionDir)cappuccino-sdk\lib\libExtensions.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)cappuccino-sdk\lib\cappuccino.lib;$(SolutionDir)cappuccino-sdk\lib\libExtensions.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -537,20 +537,37 @@
     <ClInclude Include="cappuccino-sdk\incl\extensions\spine\SlotData.h" />
     <ClInclude Include="cappuccino-sdk\incl\extensions\spine\spine-cocos2dx.h" />
     <ClInclude Include="cappuccino-sdk\incl\extensions\spine\spine.h" />
+    <ClInclude Include="Classes\Layers\BotMenuLayer.h" />
     <ClInclude Include="Classes\Layers\InputDesycLayer.h" />
+    <ClInclude Include="Dependencies\imgui-ext\ImGuiFileDialog.h" />
+    <ClInclude Include="Dependencies\imgui-ext\ImGuiFileDialogConfig.h" />
+    <ClInclude Include="Dependencies\imgui\imconfig.h" />
+    <ClInclude Include="Dependencies\imgui\imgui.h" />
+    <ClInclude Include="Dependencies\imgui\imgui_impl_opengl2.h" />
+    <ClInclude Include="Dependencies\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="Dependencies\imgui\imgui_internal.h" />
+    <ClInclude Include="Dependencies\imgui\imstb_rectpack.h" />
+    <ClInclude Include="Dependencies\imgui\imstb_textedit.h" />
+    <ClInclude Include="Dependencies\imgui\imstb_truetype.h" />
+    <ClInclude Include="Dependencies\kiero\kiero.h" />
     <ClInclude Include="Engine\Player.h" />
     <ClInclude Include="Engine\Primitives.h" />
     <ClInclude Include="Engine\Recorder.h" />
     <ClInclude Include="Engine\SharedBot.h" />
-    <ClInclude Include="framework.h" />
     <ClInclude Include="Hooks\CCScheduler.h" />
     <ClInclude Include="Hooks\GJBaseGameLayer.h" />
+    <ClInclude Include="Hooks\Helpers\BotMenuCreator.h" />
     <ClInclude Include="Hooks\Helpers\InputStatus.h" />
     <ClInclude Include="Hooks\Helpers\Performer.h" />
     <ClInclude Include="Hooks\Helpers\RecorderSelector.h" />
+    <ClInclude Include="Hooks\MenuLoaders\EditLevelLayer.h" />
+    <ClInclude Include="Hooks\MenuLoaders\LevelInfoLayer.h" />
+    <ClInclude Include="Hooks\MenuLoaders\LevelPage.h" />
     <ClInclude Include="Hooks\PlayerObject.h" />
     <ClInclude Include="Hooks\PlayLayer.h" />
-    <ClInclude Include="pch.h" />
+    <ClInclude Include="Overlay\graphics.h" />
+    <ClInclude Include="Overlay\ImGUIPlus\StringAlignment.h" />
+    <ClInclude Include="Overlay\ImGUIPlus\Tabs.h" />
     <ClInclude Include="Settings\BGDSettings.h" />
     <ClInclude Include="stdx\formatx.h" />
     <ClInclude Include="stdx\streamx.h" />
@@ -577,18 +594,35 @@
     <ClCompile Include="cappuccino-sdk\incl\cocos2dx\kazmath\src\vec2.c" />
     <ClCompile Include="cappuccino-sdk\incl\cocos2dx\kazmath\src\vec3.c" />
     <ClCompile Include="cappuccino-sdk\incl\cocos2dx\kazmath\src\vec4.c" />
+    <ClCompile Include="Classes\Layers\BotMenuLayer.cpp" />
     <ClCompile Include="Classes\Layers\InputDesycLayer.cpp" />
+    <ClCompile Include="Dependencies\imgui-ext\ImGuiFileDialog.cpp" />
+    <ClCompile Include="Dependencies\imgui\imgui.cpp" />
+    <ClCompile Include="Dependencies\imgui\imgui_demo.cpp" />
+    <ClCompile Include="Dependencies\imgui\imgui_draw.cpp" />
+    <ClCompile Include="Dependencies\imgui\imgui_impl_opengl2.cpp" />
+    <ClCompile Include="Dependencies\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="Dependencies\imgui\imgui_tables.cpp" />
+    <ClCompile Include="Dependencies\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Dependencies\kiero\kiero.cpp" />
     <ClCompile Include="Dependencies\SimpleMemory\SimpleMemory.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Engine\Player.cpp" />
     <ClCompile Include="Engine\Recorder.cpp" />
     <ClCompile Include="Engine\SharedBot.cpp" />
     <ClCompile Include="Hooks\GJBaseGameLayer.cpp" />
+    <ClCompile Include="Hooks\Helpers\BotMenuCreator.cpp" />
     <ClCompile Include="Hooks\Helpers\InputStatus.cpp" />
     <ClCompile Include="Hooks\Helpers\Performer.cpp" />
     <ClCompile Include="Hooks\Helpers\RecorderSelector.cpp" />
+    <ClCompile Include="Hooks\MenuLoaders\LevelPage.cpp" />
     <ClCompile Include="Hooks\PlayerObject.cpp" />
     <ClCompile Include="Hooks\PlayLayer.cpp" />
+    <ClCompile Include="Overlay\ImGUIPlus\StringAlignment.cpp" />
+    <ClCompile Include="Overlay\ImGUIPlus\Tabs.cpp" />
+    <ClCompile Include="Overlay\MainMenu.cpp" />
+    <ClCompile Include="Overlay\MainMenu.h" />
+    <ClCompile Include="Overlay\graphics.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="Settings\BGDSettings.cpp" />
   </ItemGroup>

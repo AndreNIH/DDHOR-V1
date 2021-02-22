@@ -41,7 +41,7 @@
 #include "network/HttpResponse.h"
 #include "network/HttpClient.h"
 
-#include "CocoStudio/Armature/CCArmature.h"
+/*#include "CocoStudio/Armature/CCArmature.h"
 #include "CocoStudio/Armature/CCBone.h"
 #include "CocoStudio/Armature/animation/CCArmatureAnimation.h"
 #include "CocoStudio/Armature/datas/CCDatas.h"
@@ -71,7 +71,7 @@
 
 #include "CocoStudio/Action/CCActionManager.h"
 
-
+*/
 // Physics integration
 #if CC_ENABLE_CHIPMUNK_INTEGRATION || CC_ENABLE_BOX2D_INTEGRATION
 #include "physics_nodes/CCPhysicsDebugNode.h"

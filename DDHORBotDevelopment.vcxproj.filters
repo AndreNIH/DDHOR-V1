@@ -52,14 +52,44 @@
     <Filter Include="Source Files\Classes">
       <UniqueIdentifier>{0092e4a6-2dfc-48bb-8cb0-11eb6681955e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Classes\UI Layers">
+      <UniqueIdentifier>{76e40858-5a43-4919-9bc1-4513d872ab8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\UI Layers">
+      <UniqueIdentifier>{e00ef04e-59f1-4e7e-ab52-8bf530357eea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Hooks\Menu Loaders">
+      <UniqueIdentifier>{e76d6288-d6a8-46e8-a42f-600a4f17ca93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Hooks\Menu Loaders">
+      <UniqueIdentifier>{00f667bc-dba5-48ef-a9d6-b68735c3039c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Overlay">
+      <UniqueIdentifier>{5b18d982-50a7-4473-8a62-f4f010c1c048}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Overlay">
+      <UniqueIdentifier>{631b2e58-1d17-403f-b40e-66ef29ae2a3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependency  Files">
+      <UniqueIdentifier>{b79343ca-78e2-4939-8674-55ca6d30f02f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependency  Files\kiero">
+      <UniqueIdentifier>{5c8c9d6d-15d9-41be-a094-8e8a09bad9cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependency  Files\imgui">
+      <UniqueIdentifier>{bce02104-b075-47b6-853b-1b0c2f78e62d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Overlay\ImGUIPlus">
+      <UniqueIdentifier>{5004e175-6d6b-417e-87c8-ab68e8009ee3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Overlay\ImGUIPlus">
+      <UniqueIdentifier>{82f02efa-9e33-4c14-bcf6-b08153da10e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependency  Files\imgui-ext">
+      <UniqueIdentifier>{6459b627-548e-4dfb-8a0f-b5db65e0de69}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="cappuccino-sdk\incl\cocos2dx\actions\CCAction.h">
       <Filter>Header Files\cocos2d</Filter>
     </ClInclude>
@@ -1239,9 +1269,6 @@
     <ClInclude Include="Hooks\Helpers\RecorderSelector.h">
       <Filter>Header Files\Hooks\Helpers</Filter>
     </ClInclude>
-    <ClInclude Include="Classes\Layers\InputDesycLayer.h">
-      <Filter>Header Files\Classes</Filter>
-    </ClInclude>
     <ClInclude Include="Types\PlayerCheckpoint.h">
       <Filter>Header Files\Types</Filter>
     </ClInclude>
@@ -1250,6 +1277,66 @@
     </ClInclude>
     <ClInclude Include="Hooks\PlayerObject.h">
       <Filter>Header Files\Hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Layers\InputDesycLayer.h">
+      <Filter>Header Files\Classes\UI Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Layers\BotMenuLayer.h">
+      <Filter>Header Files\Classes\UI Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooks\MenuLoaders\LevelPage.h">
+      <Filter>Header Files\Hooks\Menu Loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooks\MenuLoaders\LevelInfoLayer.h">
+      <Filter>Header Files\Hooks\Menu Loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooks\MenuLoaders\EditLevelLayer.h">
+      <Filter>Header Files\Hooks\Menu Loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooks\Helpers\BotMenuCreator.h">
+      <Filter>Header Files\Hooks\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Overlay\graphics.h">
+      <Filter>Header Files\Overlay</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\kiero\kiero.h">
+      <Filter>Dependency  Files\kiero</Filter>
+    </ClInclude>
+    <ClInclude Include="Overlay\ImGUIPlus\StringAlignment.h">
+      <Filter>Header Files\Overlay\ImGUIPlus</Filter>
+    </ClInclude>
+    <ClInclude Include="Overlay\ImGUIPlus\Tabs.h">
+      <Filter>Header Files\Overlay\ImGUIPlus</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\imgui\imgui_internal.h">
+      <Filter>Dependency  Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\imgui\imstb_rectpack.h">
+      <Filter>Dependency  Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\imgui\imstb_textedit.h">
+      <Filter>Dependency  Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\imgui\imstb_truetype.h">
+      <Filter>Dependency  Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\imgui\imconfig.h">
+      <Filter>Dependency  Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\imgui\imgui.h">
+      <Filter>Dependency  Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\imgui\imgui_impl_opengl2.h">
+      <Filter>Dependency  Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\imgui\imgui_impl_win32.h">
+      <Filter>Dependency  Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\imgui-ext\ImGuiFileDialog.h">
+      <Filter>Dependency  Files\imgui-ext</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\imgui-ext\ImGuiFileDialogConfig.h">
+      <Filter>Dependency  Files\imgui-ext</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1331,14 +1418,65 @@
     <ClCompile Include="Hooks\Helpers\RecorderSelector.cpp">
       <Filter>Source Files\Hooks\Helpers</Filter>
     </ClCompile>
-    <ClCompile Include="Classes\Layers\InputDesycLayer.cpp">
-      <Filter>Source Files\Classes</Filter>
-    </ClCompile>
     <ClCompile Include="Hooks\PlayerObject.cpp">
       <Filter>Source Files\Hooks</Filter>
     </ClCompile>
+    <ClCompile Include="Classes\Layers\InputDesycLayer.cpp">
+      <Filter>Source Files\Classes\UI Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Layers\BotMenuLayer.cpp">
+      <Filter>Source Files\Classes\UI Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="Hooks\Helpers\BotMenuCreator.cpp">
+      <Filter>Source Files\Hooks\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Hooks\MenuLoaders\LevelPage.cpp">
+      <Filter>Source Files\Hooks\Menu Loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\kiero\kiero.cpp">
+      <Filter>Dependency  Files\kiero</Filter>
+    </ClCompile>
+    <ClCompile Include="Overlay\graphics.cpp">
+      <Filter>Source Files\Overlay</Filter>
+    </ClCompile>
+    <ClCompile Include="Overlay\MainMenu.h">
+      <Filter>Header Files\Overlay</Filter>
+    </ClCompile>
+    <ClCompile Include="Overlay\MainMenu.cpp">
+      <Filter>Source Files\Overlay</Filter>
+    </ClCompile>
     <ClCompile Include="Dependencies\SimpleMemory\SimpleMemory.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Dependency  Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Overlay\ImGUIPlus\Tabs.cpp">
+      <Filter>Source Files\Overlay\ImGUIPlus</Filter>
+    </ClCompile>
+    <ClCompile Include="Overlay\ImGUIPlus\StringAlignment.cpp">
+      <Filter>Source Files\Overlay\ImGUIPlus</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\imgui\imgui_draw.cpp">
+      <Filter>Dependency  Files\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\imgui\imgui_tables.cpp">
+      <Filter>Dependency  Files\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\imgui\imgui_widgets.cpp">
+      <Filter>Dependency  Files\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\imgui\imgui.cpp">
+      <Filter>Dependency  Files\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\imgui\imgui_demo.cpp">
+      <Filter>Dependency  Files\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\imgui\imgui_impl_win32.cpp">
+      <Filter>Dependency  Files\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\imgui\imgui_impl_opengl2.cpp">
+      <Filter>Dependency  Files\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\imgui-ext\ImGuiFileDialog.cpp">
+      <Filter>Dependency  Files\imgui-ext</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
